@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: url(../img/espaco-sideral.jpg) fixed;
+    background: url(../img/espaco-sideral.jpg) no-repeat center center fixed;
     background-size: 100%;
 }
 
@@ -24,10 +24,113 @@
 input::placeholder {
     padding-left: 10px;
 }
-input[type=text]{
+
+input[type=text] {
     background: white;
     width: 160px;
     height: 40px;
-    border-color: blue  ;
+    border-color: blue;
     border-radius: 15px;
+    margin-top: 0px;
+    vertical-align: middle;
+    
+}
+
+.container p {
+    color: white;
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-shadow: 1px 1px black;
+}
+
+#formulario {
+    text-align: center;
+}
+
+#formulario label {
+    color: white;
+    font-size: 20px;
+    text-shadow: 1px 1px black;
+    vertical-align: middle;
+}
+
+input[type=submit] {
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    margin-top: 0px;
+    background: #A14EBF;
+    color: white;
+    font-weight: bold;
+    box-shadow: 2px 2px black;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background: #8610A7;
+}
+input[type=button] {
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    margin-top: 30px;
+    background: #785ae6;
+    color: white;
+    font-weight: bold;
+    box-shadow: 2px 2px black;
+    cursor: pointer;
+}
+input[type=button]:hover {
+    background: #5d77ca;
+}
+table {
+    width: 400px;
+    margin-top: 50px;
+    border-collapse: collapse;
+    color: white;
+    font-size: 1.4em;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+table th {
+    border-bottom: 2px solid white;
+    padding: 5px;
+    font-size: 30px;
+}
+table td {
+    border-bottom: 1px solid white;
+    padding: 5px;
+}
+.resultado {
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    margin-top: 30px;
+    text-shadow: 1px 1px black;
+}
+.result{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 790px) {
+    *{
+        background-size: cover;
+    }
+    .titulo{
+        font-size: 1.5em;
+    }
+    .container {
+        width: 65%;
+    }
+    input[type=text] {
+        display: block;
+        margin: 0 auto;
+    }
+    #formulario label{
+        display: block;
+        margin-top: 20px;
+    }
+    table{
+        width: 90%;
+    }
 }
