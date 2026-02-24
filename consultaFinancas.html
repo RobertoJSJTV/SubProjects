@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <script src="ProjetoFinancas/js/Script.js"></script>
+
+    <title>Finança Fácil</title>
+</head>
+
+<body onload="carregaListaDespesas()">
+    <div class="nav bg-warning container-fluid">
+        <div class="container ms-auto">
+            <nav class="navbar navbar-expand-lg">
+                <i class="fa-solid fa-angle-left me-5" style="color: white; font-size: 50px; cursor: pointer;"
+                    aria-label="botão de voltar" onclick="window.location.href='index.html'"></i>
+                <h1 class="text-white fw-bold">Finança Fácil</h1>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-target"
+                    aria-controls="nav-target" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-target">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                                <a class="nav-link text-white" href="financas.html">Cadastro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold text-white" href="consultaFinancas.html" rel="noopener noreferrer">Consulta</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col mb-3">
+                <h1 class="mt-5 display-4">Consultar Despesas</h1>
+                </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-2">
+                <select class="form-control" id="ano">
+                    <option value="">Ano</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <select class="form-control" id="mes">
+                    <option value="">Mês</option>
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" id="dia" placeholder="dia">
+            </div>
+            <div class="col-md-6">
+                <select class="form-control" id="tipo">
+                    <option value="">Tipo</option>
+                    <option value="Alimentacao">Alimentação</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Moradia">Moradia</option>
+                    <option value="Saude">Saúde</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="Educacao">Educação</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+                        <div class="col-md-8">
+                <input type="text" class="form-control" id="descricao" placeholder="Descrição">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" id="valor" placeholder="Valor">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary w-100" onclick="pesquisarDespesas()"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaDespesas">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- Modal para gravação -->
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalRegistraDespesaLabel" id="modalRegistraDespesa">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitulo"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-bs-dismiss="modal" id="modalBotao"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
