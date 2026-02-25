@@ -40,6 +40,8 @@ body {
     gap: 20px;
     padding: 20px 10%;
     flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .card {

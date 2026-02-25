@@ -8,7 +8,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="principalPage/js/Script.js"></script>
     <title>Sub Projects</title>
 </head>
 
@@ -25,10 +26,17 @@
             <div class="collapse navbar-collapse" id="nav-target">
                 <ul class="navbar-nav ms-auto">
                     <li class="navbar-item"><a class="nav-link text-white"
-                            href="https://robertojsjtv.github.io/Portifolio/">Resume</a></li>
+                            href="https://robertojsjtv.github.io/Portifolio/" id="resume">Resume</a></li>
                     <li class="navbar-item"><a class="nav-link text-white" href="project2/index.html"
-                            rel="noopener noreferrer">Social Medias</a></li>
+                            rel="noopener noreferrer" id="social-medias">Social Medias</a></li>
+
+                    <select class="form" onchange="idioma(this)">
+                        <option value="">Select Language</option>
+                        <option value="en">English</option>
+                        <option value="pt">Portuguese</option>
+                    </select>
                 </ul>
+
             </div>
         </div>
     </nav>
@@ -37,25 +45,27 @@
         <div class="cards-container">
             <div class="card">
                 <img class="card-imagem" src="projetoIMC/img/imc.png" alt="project IMC">
-                <h3>Project IMC</h3>
-                <p>the project it's a case to learn and train javascript, and using at the cotidian.</p>
+                <h3 id="imc">Project IMC</h3>
+                <p id="imc-tex">the project it's a case to learn and train javascript, and using at the cotidian.</p>
                 <p class="lingua">html 5</p>
                 <p class="lingua">css</p>
                 <p class="lingua">javascript</p>
                 <p class="lingua">bootstrap</p>
-                <a href="https://robertojsjtv.github.io/SubProjects/imc" target="_blank" rel="noopener noreferrer">Learn more
-                    </a>
+                <a href="https://robertojsjtv.github.io/SubProjects/imc" target="_blank" rel="noopener noreferrer"
+                    id="imc-link">Learn more
+                </a>
             </div>
             <div class="card">
                 <img class="card-imagem" src="principalPage/img/financaFacil.png" alt="project Finança Fácil">
-                <h3>Project Finança Fácil</h3>
-                <p>the project it's a case to learn and train javascript, and using at the cotidian.</p>
+                <h3 id="proj-finans">Project Finança Fácil</h3>
+                <p id="proj-finans-tex">the project it's a case to learn and train javascript, and using at the
+                    cotidian.</p>
                 <p class="lingua">html 5</p>
                 <p class="lingua">css</p>
                 <p class="lingua">javascript</p>
                 <p class="lingua">bootstrap</p>
-                <a href="financas.html" target="_blank" rel="noopener noreferrer">Learn more
-                    </a>
+                <a href="financas.html" target="_blank" rel="noopener noreferrer" id="finans-link">Learn more
+                </a>
             </div>
         </div>
     </div>
