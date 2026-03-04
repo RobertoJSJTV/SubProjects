@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card{
+
+}
+.tituloTex{
+    cursor: pointer;
+}
+#taskForm{
+    display: none;
+}
+.btn-add-cartao{
+    display: block;
+    text-align: start;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+.btn-add-cartao:hover{
+    background-color: aliceblue;
+}
